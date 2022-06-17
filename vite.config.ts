@@ -14,8 +14,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     /*
-    This is also incorrectly being interpreted as "" | "esbuild"
-    instead of "esbuild".
+    This is incorrectly being interpreted as "" | "esbuild"
+    instead of boolean | "esbuild".
     */
     minify: !process.env.TAURI_DEBUG && 'esbuild',
   },
